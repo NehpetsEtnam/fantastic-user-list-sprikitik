@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Users.Pages.User.UserPage"
+    xmlns:viewModel="clr-namespace:Users.Pages.User"
+    x:DataType="viewModel:UserViewModel">
+
+    <ContentPage.Content>
+
+        <StackLayout
+            x:DataType="viewModel:UserViewModel"
+            Padding="10,20,10,20">
+
+            <Image
+                HeightRequest="150"
+                HorizontalOptions="Center"
+                Source="{Binding User.ImageUrl}"
+                WidthRequest="150"/>
+
+            <Label
+                FontSize="18"
+                Text="{Binding User.Name}"
+                TextColor="Black"
+                HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

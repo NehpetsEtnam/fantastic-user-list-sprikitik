@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2401" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Prism.DryIoc.Forms" Version="8.1.97" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="Microsoft.Bcl.HashCode" Version="1.1.1" />
+    <PackageReference Include="Refit" Version="6.3.2" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Pages\" />
+    <None Remove="Prism.DryIoc.Forms" />
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="Pages\User\" />
+    <None Remove="DAL\" />
+    <None Remove="DAL\Api\" />
+    <None Remove="DAL\Model\" />
+    <None Remove="DAL\Services\" />
+    <None Remove="DAL\Model\User\" />
+    <None Remove="DAL\Services\User\" />
+    <None Remove="DAL\Api\User\" />
+    <None Remove="Microsoft.Bcl.HashCode" />
+    <None Remove="Refit" />
+    <None Remove="Xamarin.CommunityToolkit" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\" />
+    <Folder Include="Pages\User\" />
+    <Folder Include="DAL\" />
+    <Folder Include="DAL\Api\" />
+    <Folder Include="DAL\Model\" />
+    <Folder Include="DAL\Services\" />
+    <Folder Include="DAL\Model\User\" />
+    <Folder Include="DAL\Services\User\" />
+    <Folder Include="DAL\Api\User\" />
+  </ItemGroup>
+</Project>

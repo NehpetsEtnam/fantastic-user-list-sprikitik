@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Users.Pages.User.UserListPage"
+    xmlns:viewModel="clr-namespace:Users.Pages.User"
+    xmlns:userModel="clr-namespace:Users.DAL.Model.User"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    x:DataType="viewModel:UserListViewModel">
+
+    <ContentPage.Content>
+
+        <CollectionView
+            ItemsSource="{Binding Users}"
+            SelectionMode="None">
+
+            <CollectionView.ItemTemplate>
+
+                <DataTemplate>
+
+                    <StackLayout
+                        x:DataType="userModel:UserModel"
+                        Orientation="Horizontal"
+                        Padding="10,5,10,5"
+                        xct:TouchEffect.NativeAnimation="True"
+                        xct:TouchEffect.NativeAnimationColor="#4D2C86C6"
+                        xct:TouchEffect.Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:UserListViewModel}}, Path=OpenUserCommand}"
+                        xct:TouchEffect.CommandParameter="{Binding .}">
+
+                        <Image
+                            HeightRequest="50"
+                            Source="{Binding ImageUrl}"
+                            WidthRequest="50"/>
+
+                        <Label
+                            FontSize="15"
+                            Text="{Binding Name}"
+                            TextColor="Black"
+                            VerticalOptions="Center"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ContentPage.Content>
+</ContentPage>
+
