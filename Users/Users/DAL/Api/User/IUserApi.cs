@@ -1,5 +1,4 @@
-﻿using System;
-using Refit;
+﻿using Refit;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Users.DAL.Model.User;

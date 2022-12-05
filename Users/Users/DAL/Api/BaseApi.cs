@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Users.DAL.Api
+﻿namespace Users.DAL.Api
 {
     internal class BaseApi
 	{

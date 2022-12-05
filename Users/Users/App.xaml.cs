@@ -1,23 +1,15 @@
-﻿using System;
-using Prism;
-using System.Net.Http;
-using System.Net.WebSockets;
+﻿using Prism;
 using Prism.DryIoc;
-using Prism.Events;
-using Prism.Navigation;
 using Users.Pages.User;
 using Users.DAL.Services.User;
-using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 using Prism.Ioc;
+using Users.Essentials;
 
 namespace Users
 {
     public partial class App : PrismApplication
     {
-        private static UserService userService = new UserService();
-
         public App() : this(null) { }
         public App(IPlatformInitializer initializer) : base(initializer) { }
 
@@ -35,7 +27,8 @@ namespace Users
             containerRegistry.RegisterForNavigation<UserListPage, UserListViewModel>();
             containerRegistry.RegisterForNavigation<UserPage, UserViewModel>();
 
-            containerRegistry.RegisterInstance<IUserService>(userService);
+            containerRegistry.RegisterSingleton<IUserService, UserService>();
+            containerRegistry.RegisterSingleton<IConnectivity, Essentials.Connectivity>();
         }
 
         protected override void OnStart ()

@@ -12,7 +12,8 @@
 
         <CollectionView
             ItemsSource="{Binding Users}"
-            SelectionMode="None">
+            SelectionMode="None"
+            EmptyView="No items to display">
 
             <CollectionView.ItemTemplate>
 

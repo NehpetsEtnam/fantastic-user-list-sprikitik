@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using Prism.Navigation;
+﻿using Prism.Navigation;
 using Users.DAL.Model.User;
 
 namespace Users.Pages.User

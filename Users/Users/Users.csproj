@@ -34,6 +34,7 @@
     <None Remove="Microsoft.Bcl.HashCode" />
     <None Remove="Refit" />
     <None Remove="Xamarin.CommunityToolkit" />
+    <None Remove="Essentials\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\" />
@@ -45,5 +46,6 @@
     <Folder Include="DAL\Model\User\" />
     <Folder Include="DAL\Services\User\" />
     <Folder Include="DAL\Api\User\" />
+    <Folder Include="Essentials\" />
   </ItemGroup>
 </Project>

@@ -18,6 +18,7 @@ namespace Users.DAL.Services.User
         public async Task<List<UserModel>> GetUsers()
         {
             var allUser = new List<UserModel>();
+
             try
             {
                 var apiClient = RestService.For<IUserApi>(BaseApi.BaseUrl);
@@ -29,7 +30,7 @@ namespace Users.DAL.Services.User
                 Console.WriteLine("Error : " + ex.Message);
             }
 
-            return allUser.Distinct<UserModel>(UserModel.Comparer).ToList();
+            return allUser.Distinct(UserModel.Comparer).ToList();
         }
     }
 }

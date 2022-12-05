@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 
 namespace Users.DAL.Model.User
 {
-	public class UserModel
+    public class UserModel
     {
         public static IEqualityComparer<UserModel> Comparer => new UserModelEqualityComparer();
 
